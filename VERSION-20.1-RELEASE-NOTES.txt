@@ -1,0 +1,24 @@
+I-LEARNACE WIZARD — VERSION 20.1
+Major school portal and template experience update.
+
+Implemented:
+1. One unified school login form. Roles are detected from the authenticated account; role tabs are removed.
+2. Template cards now open full, non-functional previews before a school is created.
+3. Preview portals use "Your School" placeholder branding and do not expose Super Admin access.
+4. School application now accepts logo, homepage, About, Admissions, and campus/gallery images.
+5. Provisioning carries submitted media into the created school portal.
+6. Real portals display school-owned images with safe fallback images when none are uploaded.
+7. School Admin dashboard now has a settings area for changing portal images and the admin's own password.
+8. School name is intentionally not editable from School Admin settings.
+9. View Credentials now opens an authorized credentials popup with individual Copy buttons.
+10. Popup copies only the admin login URL and the authorized admin/platform access credentials; the public portal URL is not included.
+11. Predictable school-name-based Super Admin passwords were replaced with securely generated passwords to avoid creating guessable credentials.
+12. Added database migration: 19_phase20_1_school_media.sql.
+
+Important: Apply the Version 20.1 database migration before testing the new media features.
+
+VERSION 20.1 REPAIR PASS
+13. School portal branding lookup now falls back safely when an existing database has not yet received the media_assets migration.
+14. Portal-loading database failures are returned to the browser instead of silently leaving the page on “Loading school portal...”.
+15. Browser API failures now log method, endpoint, status and message to the console.
+16. School portal loading now has a 15-second diagnostic timeout and a visible retry action.

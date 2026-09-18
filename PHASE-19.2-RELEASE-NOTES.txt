@@ -1,0 +1,33 @@
+I-LEARNACE WIZARD - PHASE 19.2
+
+This release fixes the portal creation issue shown in the latest screenshots.
+
+FIXED
+1. PremiumInstitution built-in template repair
+   - Legacy databases with a missing/inactive built-in template are repaired automatically.
+   - Schema 17 also forces all four built-in templates to ACTIVE.
+
+2. Working portal links
+   - Portal link: /?school=<school-slug>
+   - Admin login link: /?school=<school-slug>&login=1
+   - Links are stored permanently with the provisioning record.
+
+3. Application provisioning visibility
+   - School Applications now shows provisioning status.
+   - Shows progress bar and percentage.
+   - Shows CREATED only after provisioning reaches ACTIVE.
+   - Open Portal and Admin Login links remain available after creation.
+   - Failed jobs can be retried.
+
+4. Credential recovery for authorized Super Admin
+   - Generated school admin and platform Super Admin passwords are encrypted at rest with AES-256-GCM.
+   - Authentication passwords remain bcrypt hashes.
+   - Only an authenticated global Super Admin can call the credential recovery endpoint.
+
+5. Database migration
+   - Added schema/17_phase19_2_portal_links_and_credentials.sql
+   - RUN-ALL-SCHEMA.bat imports schema 17 automatically.
+
+IMPORTANT
+Run the database schema update before testing this version.
+Use a stable PROVISIONING_CREDENTIAL_KEY in production and do not change it after portals are created.

@@ -1,0 +1,12 @@
+I-LEARNACE WIZARD PHASE 19.1
+Fixed provisioning engine database-pool contamination.
+
+Primary fix:
+- Dedicated tenant MySQL connections are now used for tenant setup.
+- Central provisioning queries remain on the central database.
+- Prevents: Table '<tenant>.school_provisioning' doesn't exist.
+
+Also:
+- RUN-ALL-SCHEMA now includes schemas 14, 15 and 16.
+- Added schema 16 provisioning infrastructure safety migration.
+- Added Phase 19.1 documentation.

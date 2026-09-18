@@ -1,0 +1,19 @@
+I-LEARNACE WIZARD - PHASE 19.5
+
+Implemented the real school portal experience:
+- Professional multi-page-style public school website sections.
+- Shared portal design system used by all templates.
+- Premium Institution uses the primary premium visual direction.
+- Other templates reuse the same functional portal engine while changing visual treatment and branding.
+- School colors and uploaded logo are applied to the generated portal.
+- Separate role-based login experience for Student, Staff/Teacher, School Admin and I-LEARNACE Super Admin.
+- Student self-registration route added.
+- Teachers and staff remain administrator-created only.
+- Separate dashboards for Student, Teacher, School Admin and portal Super Admin.
+- School application now collects school admin email and password.
+- Admin password is encrypted at rest before provisioning.
+- Provisioning uses the submitted school admin credentials.
+- Portal Super Admin email is i-learnace@gmail.com.
+- Generated portal Super Admin password format: i-learnace@<school-slug>123.
+- Database migration 18 adds application credential storage and school-scoped account uniqueness.
+- Existing generated portals remain available; newly provisioned portals receive the complete account model.

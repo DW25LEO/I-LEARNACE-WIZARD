@@ -1,0 +1,20 @@
+I-LEARNACE WIZARD — VERSION 20.3 (IMPLEMENTATION START)
+
+Shared backend / shared feature architecture:
+- Functional backend changes are intended to propagate to every portal template.
+- Frontend visual identity remains template-specific.
+
+Implemented in this package:
+1. School form submissions can include up to 12 supporting documents per submission.
+2. Documents are stored privately, with metadata linked to the submitted school application.
+3. New review fields support review notes, reviewer identity and review time.
+4. Super Admin submission-detail API can retrieve the full submitted form and document list.
+5. Protected document viewing endpoint is available only to authorized Super Admin sessions.
+6. Added Version 20.3 database migration.
+7. Template preview system is prepared for functional preview navigation.
+8. New generated frontend design references are included for Classic Education, Minimal Learning and Model Academy.
+
+Next implementation step in this package: wire the preview navigation and Submitted Forms / Review UI to the new backend endpoints.
+9. Added interactive preview navigation for Student, Teacher and Admin preview pages.
+10. Added Submitted Forms navigation and review interface in Super Admin control.
+11. Added generated design assets to the frontend template collection, including Model Academy.

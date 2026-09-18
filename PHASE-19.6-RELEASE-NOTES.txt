@@ -1,0 +1,10 @@
+I-LEARNACE WIZARD — PHASE 19.6
+
+FIXES
+- Fixed expired/invalid browser session behavior. A 401 now clears stale credentials and returns the user to sign-in instead of flooding the console with protected API requests.
+- Added explicit role validation during login so an account cannot enter a dashboard by selecting the wrong role tab.
+- School-scoped I-LEARNACE Super Admin accounts can now manage the specific school they were provisioned for.
+- Extended school management permissions for the school-scoped Super Admin across students, teachers, classes, subjects and exams.
+
+IMPORTANT
+The screenshot message “Invalid or expired session” means the JWT stored in the browser is no longer accepted by the backend. This is commonly caused by an old token after restarting/replacing the backend or changing JWT_SECRET. After installing this version, sign in again. Keep the same JWT_SECRET in backend/.env when restarting the same database.

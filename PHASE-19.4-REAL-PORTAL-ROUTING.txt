@@ -1,0 +1,20 @@
+I-LEARNACE WIZARD — PHASE 19.4
+REAL SCHOOL PORTAL ROUTING FIX
+
+Problem fixed:
+Opening /school/<slug> while already logged into the I-LEARNACE Wizard previously displayed the global Platform Control Center instead of the generated school portal.
+
+Changes:
+1. School URLs now have routing priority over the global Wizard dashboard.
+2. /school/<slug> always loads the real provisioned school's public portal.
+3. /school/<slug>/admin opens the shared school role login flow.
+4. Student and Staff/Admin buttons on each generated portal now link into the school's shared login route.
+5. Provisioning now stores path-based portal URLs:
+   /school/<slug>
+   /school/<slug>/admin
+6. The existing provisioning engine remains database-backed: it creates the tenant database, tenant tables, school record, branding, feature controls, and school access accounts before the provisioning status becomes ACTIVE.
+
+Important local test:
+Use the exact URL shown after provisioning, for example:
+http://127.0.0.1:5175/school/peace
+The old /?school=peace format is still recognized for compatibility, but Phase 19.4 uses the clean route.

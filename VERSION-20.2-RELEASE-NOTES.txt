@@ -1,0 +1,16 @@
+I-LEARNACE WIZARD — VERSION 20.2
+
+Changes in this version:
+1. Dark mode contrast repair
+   - Inputs, selects, text entry areas and file-upload controls now remain visible in dark mode.
+   - Placeholder text, borders and option lists receive readable dark-theme colors.
+   - Super Admin dashboard form controls also receive explicit dark-mode contrast handling.
+   - Credentials modal and related cards now follow the active dark theme.
+
+2. Subtle Super Admin access
+   - Removed the obvious "Administrator access" footer button.
+   - Replaced it with a small clickable © symbol.
+   - Clicking © opens the existing I-LEARNACE Wizard Super Admin login route.
+   - Added an accessible label and tooltip for authorized users.
+
+No school portal data model, provisioning logic, or existing major workflows were intentionally changed.

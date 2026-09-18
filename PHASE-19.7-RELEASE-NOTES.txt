@@ -1,0 +1,12 @@
+I-LEARNACE WIZARD PHASE 19.7
+
+FIXES:
+- Separated Wizard Super Admin login from school portal login.
+- Wizard login now shows only Super Admin access, not Student/Staff/Admin tabs.
+- Fixed UI role names to database roles:
+  ADMIN -> SCHOOL_ADMIN
+  STAFF -> TEACHER
+- Prevented failed login attempts from being treated as expired sessions.
+- Prevented multiple simultaneous 401 responses from repeatedly resetting the UI and causing flashing.
+- Successful login resets the session-expiry guard.
+- School portal URLs can accept SCHOOL_ADMIN/TEACHER role names and map them correctly to UI roles.
